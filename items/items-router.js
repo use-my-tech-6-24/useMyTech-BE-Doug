@@ -77,4 +77,17 @@ router.delete("/:id", restricted, async (req, res) => {
     });
   }
 });
+
+router.get("/category/:id", async (req, res) => {
+  try {
+    const item = await Items.getItemsByCategoryId(req.params.id);
+    res.status(200).json(item);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error grabbing items by categories"
+    });
+  }
+});
+
 module.exports = router;
