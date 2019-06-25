@@ -32,7 +32,7 @@ function getItemsById(id) {
   return db("items")
     .select(["*"])
     .from("items")
-    .where("items.users_id", "=", id);
+    .where("items.id", "=", id);
 }
 
 function messagesByItemId(itemId) {
