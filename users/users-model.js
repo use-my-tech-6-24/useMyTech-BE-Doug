@@ -17,7 +17,8 @@ module.exports = {
   getUsers5,
   rentableItems,
   messagesByItemId,
-  comboItems
+  comboItems,
+  update
 };
 
 async function add(user) {
@@ -148,6 +149,16 @@ function messagesByItemId(itemId) {
     .select("*")
     .from("rentable");
   //.where("rentable.item_id", "=", itemId);
+}
+
+function update(id, changes) {
+  let ida = id;
+  return getUsers2()
+    .where({ id })
+    .update(changes, "*")
+    .then(() => {
+      return getUsers5(ida);
+    });
 }
 
 /*

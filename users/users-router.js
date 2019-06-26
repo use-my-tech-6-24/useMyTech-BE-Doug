@@ -26,6 +26,17 @@ router.get("/:id", restricted, async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+router.put("/:id", restricted, async (req, res) => {
+  try {
+    const users = await Users.update(req.params.id, req.body);
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ message: "We ran into an error" });
+    console.log(error);
+  }
+});
+
 /*
 router.get("/items", restricted, async (req, res) => {
   try {
