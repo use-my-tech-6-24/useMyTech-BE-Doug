@@ -43,6 +43,9 @@ router.post("/", restricted, async (req, res) => {
       req.headers.authorization,
       "secret for local development"
     );
+    let testBody = req.body.category.toLowerCase();
+    console.log(testBody);
+    req.body = { ...req.body, category: testBody };
     let newItem = {
       ...req.body,
       users_id: decodeToken.subject,
@@ -80,7 +83,9 @@ router.delete("/:id", restricted, async (req, res) => {
 
 router.get("/category/:id", async (req, res) => {
   try {
-    const item = await Items.getItemsByCategoryId(req.params.id);
+    let lowerCase = req.params.id;
+
+    const item = await Items.getItemsByCategoryId(lowerCase.toLowerCase());
     res.status(200).json(item);
   } catch (error) {
     console.log(error);
