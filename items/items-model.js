@@ -12,7 +12,8 @@ module.exports = {
   findById,
   update,
   order66,
-  getItemsByCategoryId
+  getItemsByCategoryId,
+  getMessagesId
 };
 
 function add(item) {
@@ -56,8 +57,17 @@ function update(id, changes) {
     .update(changes, "*");
 }
 
+function getMessagesId() {
+  return db("rentable")
+    .select("rentable.item_id")
+    .from("rentable");
+}
+
 function order66(id) {
   return getItems()
     .where({ id })
-    .del();
+    .del()
+    .then(() => {
+      return getItems();
+    });
 }

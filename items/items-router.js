@@ -2,7 +2,7 @@ const knex = require("knex");
 const router = require("express").Router();
 
 const Items = require("./items-model.js");
-
+const Rentable = require("../rentable/rentable-model.js");
 const knexConfig = require("../knexfile.js");
 
 const restricted = require("../auth/restricted-middleware.js");
@@ -71,8 +71,25 @@ router.put("/:id", restricted, async (req, res) => {
 
 router.delete("/:id", restricted, async (req, res) => {
   try {
-    const item = await Items.order66(req.params.id);
-    res.status(200).json(item);
+    const item = await Items.getMessagesId();
+    let a;
+    let b;
+    let newArray = [];
+    console.log(item);
+    item.forEach(message => {
+      newArray.push(message.item_id);
+    });
+    console.log(newArray);
+    console.log(req.params.id);
+    console.log(newArray.includes(req.params.id));
+
+    if (!newArray.includes(req.params.id)) {
+      b = await Rentable.order66(req.params.id);
+      a = await Items.order66(req.params.id);
+    } else {
+      a = await Items.order66(req.params.id);
+    }
+    res.status(200).json(a);
   } catch (error) {
     console.log(error);
     res.status(500).json({

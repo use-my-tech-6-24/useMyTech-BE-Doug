@@ -7,6 +7,8 @@ exports.seed = function(knex, Promise) {
       username: "test1",
       email: "test1@gmail.com",
       password: bcrypt.hashSync("abc123", 8),
+      image_url:
+        "https://ca.slack-edge.com/T4JUEB3ME-UHQMX3CLS-8aca137aa115-72",
       town: "Los Angeles",
       state: "CA"
     },
@@ -15,6 +17,8 @@ exports.seed = function(knex, Promise) {
       username: "test2",
       email: "test2@gmail.com",
       password: bcrypt.hashSync("abc123", 8),
+      image_url:
+        "https://ca.slack-edge.com/T4JUEB3ME-UHQMX3CLS-8aca137aa115-72",
       town: "Austin",
       state: "TX"
     }
