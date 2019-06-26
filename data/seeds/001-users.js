@@ -6,13 +6,17 @@ exports.seed = function(knex, Promise) {
       id: 1,
       username: "test1",
       email: "test1@gmail.com",
-      password: bcrypt.hashSync("abc123", 8)
+      password: bcrypt.hashSync("abc123", 8),
+      town: "Los Angeles",
+      state: "CA"
     },
     {
       id: 2,
       username: "test2",
       email: "test2@gmail.com",
-      password: bcrypt.hashSync("abc123", 8)
+      password: bcrypt.hashSync("abc123", 8),
+      town: "Austin",
+      state: "TX"
     }
   ]);
 };

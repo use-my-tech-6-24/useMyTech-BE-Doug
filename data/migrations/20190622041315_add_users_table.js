@@ -10,6 +10,8 @@ exports.up = function(knex, Promise) {
       .unique()
       .notNullable();
     table.string("password", 255).notNullable();
+    table.string("town", 255).notNullable();
+    table.string("state", 2).notNullable();
   });
 };
 
