@@ -47,7 +47,7 @@ function getItemsByCategoryId(id) {
   return db("items")
     .select(["*"])
     .from("items")
-    .where("items.type", "=", id);
+    .where("items.category", "=", id);
 }
 
 function update(id, changes) {

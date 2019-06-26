@@ -15,7 +15,7 @@ exports.up = function(knex, Promise) {
     table.string("name", 255).notNullable();
     table.string("image_url", 255);
     table.float("price");
-    table.string("type", 255).notNullable();
+    table.string("category", 255).notNullable();
   });
 };
 
