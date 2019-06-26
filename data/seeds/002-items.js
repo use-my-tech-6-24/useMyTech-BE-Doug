@@ -395,7 +395,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "486.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 34,
@@ -407,7 +407,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "185.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 35,
@@ -419,7 +419,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "122.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 36,
@@ -431,7 +431,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "502.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 37,
@@ -443,7 +443,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "503.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 38,
@@ -455,7 +455,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "196.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 39,
@@ -467,7 +467,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "196.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 40,
@@ -479,7 +479,7 @@ exports.seed = function(knex, Promise) {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper sed arcu ac pellentesque. Praesent porta ex ac risus mollis, ut convallis sapien rhoncus. Integer sit amet nunc maximus, imperdiet turpis eget, venenatis eros. Quisque ornare rhoncus velit, nec pellentesque metus consectetur nec.",
       price: "89.00",
-      category: "video"
+      category: "videos"
     },
     {
       id: 41,
