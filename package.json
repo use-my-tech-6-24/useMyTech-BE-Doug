@@ -28,6 +28,7 @@
     "sqlite3": "^4.0.9"
   },
   "devDependencies": {
+    "faker": "^4.1.0",
     "knex-cleaner": "^1.1.4",
     "nodemon": "^1.19.1"
   }
