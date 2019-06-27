@@ -7,8 +7,6 @@ exports.up = function(knex, Promise) {
       .notNullable()
       .references("id")
       .inTable("items");
-    table.integer("user_id").notNullable();
-    table.string("username", 255).notNullable();
     table.string("message", 255);
   });
 };
