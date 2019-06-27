@@ -29,7 +29,7 @@ router.post("/login", (req, res) => {
         const token = generateToken(user);
 
         res.status(200).json({
-          message: `Welcome ${user.username}!`,
+          message: `Welcome ${user.username}, image: ${user.image_url}!`,
           token
         });
       } else {
@@ -45,6 +45,7 @@ function generateToken(user) {
   const payload = {
     subject: user.id,
     username: user.username,
+    image_url: user.image_url,
     roles: ["crayola"]
   };
 
