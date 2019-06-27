@@ -11,8 +11,8 @@ exports.up = function(knex, Promise) {
       .notNullable();
     table.string("password", 255).notNullable();
     table.string("image_url", 255);
-    table.string("town", 255);
-    table.string("state", 2);
+    table.string("town", 255).notNullable();
+    table.string("state", 2).notNullable();
   });
 };
 
