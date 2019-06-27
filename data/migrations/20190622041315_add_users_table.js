@@ -13,6 +13,7 @@ exports.up = function(knex, Promise) {
     table.string("image_url", 255);
     table.string("town", 255).notNullable();
     table.string("state", 2).notNullable();
+    table.string("location", 255).notNullable();
   });
 };
 

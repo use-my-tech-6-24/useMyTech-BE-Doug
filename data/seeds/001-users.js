@@ -10,7 +10,8 @@ exports.seed = function(knex, Promise) {
       image_url:
         "https://ca.slack-edge.com/T4JUEB3ME-UHQMX3CLS-8aca137aa115-72",
       town: "Los Angeles",
-      state: "CA"
+      state: "CA",
+      location: "USA"
     },
     {
       id: 2,
@@ -20,7 +21,8 @@ exports.seed = function(knex, Promise) {
       image_url:
         "https://ca.slack-edge.com/T4JUEB3ME-UHQMX3CLS-8aca137aa115-72",
       town: "Austin",
-      state: "TX"
+      state: "TX",
+      location: "not usa"
     }
   ]);
 };
