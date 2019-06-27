@@ -62,7 +62,8 @@ router.post("/", restricted, async (req, res) => {
 router.put("/:id", restricted, async (req, res) => {
   try {
     const updateItem = await Items.update(req.params.id, req.body);
-    res.status(200).json(updateItem);
+    const newSmurf = await Items.findById(req.params.id);
+    res.status(200).json(newSmurf);
   } catch (error) {
     res.status(500).json(error);
     console.log(error);
