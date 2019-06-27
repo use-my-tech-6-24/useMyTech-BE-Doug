@@ -47,3 +47,11 @@ router.get("/items", restricted, async (req, res) => {
 });
 
 module.exports = router;
+
+/*
+select users.id, users.username, items.users_id from users
+join users on users.id = items.users_id
+select rentable.message, rentable.id from rentable
+join users on users.id = items.users_id
+where items.id = 1
+*/
