@@ -26,14 +26,48 @@ function findById(id) {
     .first();
 }
 
+/*
+
+ select users.id, users.username, items.users_id from users INNER JOIN items on users.id = item.users_id
+*/
 function getItems() {
-  return db("items");
+  return db("items")
+    .select(
+      "items.id",
+      "items.users_id",
+      "items.users_username",
+      "items.users_town",
+      "items.users_state",
+      "items.name",
+      "items.image_url",
+      "items.price",
+      "items.category",
+      "items.description",
+      "users.image_url_user",
+      "users.location"
+    )
+    .from("items")
+    .join("users", "items.users_id", "users.id");
 }
 
 function getItemsById(id) {
   return db("items")
-    .select(["*"])
+    .select(
+      "items.id",
+      "items.users_id",
+      "items.users_username",
+      "items.users_town",
+      "items.users_state",
+      "items.name",
+      "items.image_url",
+      "items.price",
+      "items.category",
+      "items.description",
+      "users.image_url_user",
+      "users.location"
+    )
     .from("items")
+    .join("users", "items.users_id", "users.id")
     .where("items.id", "=", id);
 }
 

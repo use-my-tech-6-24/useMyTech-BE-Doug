@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
       .unique()
       .notNullable();
     table.string("password", 255).notNullable();
-    table.string("image_url", 255);
+    table.string("image_url_user", 255);
     table.string("town", 255).notNullable();
     table.string("state", 2).notNullable();
     table.string("location", 255).notNullable();
