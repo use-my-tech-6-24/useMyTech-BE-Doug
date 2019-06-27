@@ -37,7 +37,6 @@ router.put("/:id", restricted, async (req, res) => {
   }
 });
 
-/*
 router.get("/items", restricted, async (req, res) => {
   try {
     const users = await Users.getItems();
@@ -46,5 +45,5 @@ router.get("/items", restricted, async (req, res) => {
     res.status(500).json(error);
   }
 });
-*/
+
 module.exports = router;
