@@ -27,7 +27,21 @@ function findById(id) {
 }
 
 function getItems() {
-  return db("items");
+  return db("users")
+    .join("users", "users.id", "items.users_id")
+    .select(
+      "items.id",
+      "users.username",
+      "users.town",
+      "users.state",
+      "items.name",
+      "items.users_id",
+      "items.image_url",
+      "items.price",
+      "items.category",
+      "items.description"
+    )
+    .from("items");
 }
 
 function getItemsById(id) {
@@ -40,6 +54,7 @@ function getItemsById(id) {
   return db("users")
     .join("users", "users.id", "items.users_id")
     .select(
+      "items.id",
       "users.username",
       "users.town",
       "users.state",
